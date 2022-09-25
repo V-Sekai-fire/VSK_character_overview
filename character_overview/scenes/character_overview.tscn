@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://co3ubvk41w1ro"]
-
-[ext_resource type="Texture2D" uid="uid://msl67w8onnm4" path="res://V-Sekai_Fire_character_overview.svg" id="1_rxy5r"]
-
-[node name="V-sekaiFireCharacterOverview" type="Sprite2D"]
-position = Vector2(518, 306)
-texture = ExtResource("1_rxy5r")
