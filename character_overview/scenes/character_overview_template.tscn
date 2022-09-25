@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c12tqila35qtg" path="res://character_overview/art/fem/vsk_character_overview_fem.vrm" id="1_rwi82"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_pgslv"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_pyj7u"]
 viewport_path = NodePath("ViewableArea")
 
 [node name="Control" type="Node3D"]
@@ -112,6 +112,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.756164, 2.00701, 0.168255)
 extra_cull_margin = 100.0
 alpha_cut = 2
 texture_filter = 4
-texture = SubResource("ViewportTexture_pgslv")
+texture = SubResource("ViewportTexture_pyj7u")
 
 [node name="vsk_character_overview_fem" parent="." instance=ExtResource("1_rwi82")]
