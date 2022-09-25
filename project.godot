@@ -8,8 +8,22 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "Node3D",
+"class": &"VRMTopLevel",
+"language": &"GDScript",
+"path": "res://addons/vrm/vrm_toplevel.gd"
+}]
+_global_script_class_icons={
+"VRMTopLevel": ""
+}
+
 [application]
 
 config/name="Character Overview Game Project"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://character_overview/scenes/icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/vrm/plugin.cfg", "res://addons/Godot-MToon-Shader/plugin.cfg")

@@ -1,31 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://eoc33aqlgd76"]
+[gd_scene load_steps=3 format=3 uid="uid://eoc33aqlgd76"]
 
-[ext_resource type="Texture2D" uid="uid://msl67w8onnm4" path="res://character_overview/art/V-Sekai_Fire_character_overview.svg" id="1_dahqm"]
+[ext_resource type="PackedScene" uid="uid://c12tqila35qtg" path="res://character_overview/art/fem/vsk_character_overview_fem.vrm" id="1_rwi82"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[sub_resource type="ViewportTexture" id="ViewportTexture_pgslv"]
+viewport_path = NodePath("ViewableArea")
 
-[node name="V-sekaiFireCharacterOverview" type="Sprite2D" parent="."]
-position = Vector2(-538, 279)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_dahqm")
+[node name="Control" type="Node3D"]
 
-[node name="ViewableArea" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ViewableArea" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(1280, 720)
+size_2d_override = Vector2i(1280, 720)
+render_target_update_mode = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Grid" type="GridContainer" parent="ViewableArea"]
-layout_mode = 0
-offset_right = 899.0
-offset_bottom = 26.0
+offset_left = 384.0
+offset_top = 216.0
+offset_right = 1701.0
+offset_bottom = 253.0
 scale = Vector2(0.5, 0.5)
 columns = 1024
 
@@ -112,3 +106,12 @@ offset_bottom = 37.0
 theme_override_font_sizes/font_size = 24
 text = "SCROLL_LEFT"
 uppercase = true
+
+[node name="Overview" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.756164, 2.00701, 0.168255)
+extra_cull_margin = 100.0
+alpha_cut = 2
+texture_filter = 4
+texture = SubResource("ViewportTexture_pgslv")
+
+[node name="vsk_character_overview_fem" parent="." instance=ExtResource("1_rwi82")]
